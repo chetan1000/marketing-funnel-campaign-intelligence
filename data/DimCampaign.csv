@@ -1,0 +1,11 @@
+CampaignID,CampaignName,Channel,Objective
+C001,Meta Lead Gen,Meta,Lead Generation
+C002,Google Search,Google,Lead Generation
+C003,Google Display,Google,Awareness
+C004,LinkedIn B2B,LinkedIn,Lead Generation
+C005,YouTube Awareness,YouTube,Awareness
+C006,Meta Retargeting,Meta,Retargeting
+C007,Google Performance Max,Google,Conversion
+C008,YouTube Video,YouTube,Awareness
+C009,LinkedIn Retargeting,LinkedIn,Retargeting
+C010,Meta Conversion,Meta,Conversion

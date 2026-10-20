@@ -60,7 +60,7 @@ RLS was tested in Power BI Desktop and Service. The project documentation record
   - [`marketing_funnel_mysql_setup_import_validation.sql`](sql/marketing_funnel_mysql_setup_import_validation.sql) — MySQL setup, CSV import examples, row-count checks and validation queries
 - [`powerbi/`](powerbi/) — Power BI report file
 - [`screenshots/`](screenshots/) — dashboard, data model and Power BI Service screenshots
-- [`docs/`](docs/) — supporting technical documentation
+- [`docs/`](https://github.com/chetan1000/marketing-funnel-campaign-intelligence/tree/main/docs) — supporting technical documentation
 
 ## How to Explore the Project
 

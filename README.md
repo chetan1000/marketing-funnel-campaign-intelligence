@@ -56,17 +56,17 @@ RLS was tested in Power BI Desktop and Service. The project documentation record
 - [`README.md`](README.md) — project overview and instructions
 - [`PROJECT_LOG.md`](PROJECT_LOG.md) — technical history, implementation decisions, troubleshooting and validation
 - [`INTERVIEW_QA.md`](INTERVIEW_QA.md) — project-based interview questions and answers
+- [`data/`](data/) — nine CSV datasets used for MySQL integration and Power BI analysis
 - [`sql/`](sql/) — SQL scripts and validation queries
   - [`marketing_funnel_mysql_setup_import_validation.sql`](sql/marketing_funnel_mysql_setup_import_validation.sql) — MySQL setup, CSV import examples, row-count checks and validation queries
 - [`powerbi/`](powerbi/) — Power BI report file
 - [`screenshots/`](screenshots/) — dashboard, data model and Power BI Service screenshots
-- [`docs/`](https://github.com/chetan1000/marketing-funnel-campaign-intelligence/tree/main/docs) — supporting technical documentation
 
 ## How to Explore the Project
 
 1. Start with this README to understand the business objectives and architecture.
 2. Review [PROJECT_LOG.md](PROJECT_LOG.md) for the development journey, technical decisions, troubleshooting and validation.
-3. Explore the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql) to review database setup instructions, CSV import examples and data validation queries.
+3. Explore the [project CSV datasets](data/) and the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql).
 4. Review the Power BI report in the [`powerbi/`](powerbi/) folder and explore the dashboard and deployment screenshots in [`screenshots/`](screenshots/).
 5. Use [INTERVIEW_QA.md](INTERVIEW_QA.md) to prepare for technical discussions about the project.
 
@@ -75,5 +75,7 @@ RLS was tested in Power BI Desktop and Service. The project documentation record
 Opening the Power BI report locally may require Power BI Desktop and a compatible MySQL connection. Power BI Service refresh also depends on the configured data source and gateway.
 
 The SQL script includes setup instructions, import examples and validation queries. Review the connection settings and local CSV file paths before running any import commands.
+
+The CSV datasets are included to support exploration of the project. Verify that all data is safe for public sharing before publishing or distributing it.
 
 Database credentials, private connection details and confidential data must not be committed to the repository. Only publish data and files you have permission to share.

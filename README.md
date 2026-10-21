@@ -8,7 +8,7 @@ This project demonstrates an end-to-end Business Intelligence workflow centered 
 
 The final portfolio implementation uses a MySQL relational database as the primary data source for Power BI. The project covers database connectivity, SQL-based data validation, data transformation, relational data modeling, DAX measures, interactive dashboards and deployment to Power BI Service.
 
-The project also demonstrates the integration of database-driven reporting with scheduled refresh, gateway configuration and row-level security (RLS) testing.
+The project also demonstrates database-driven reporting with gateway configuration, scheduled refresh and row-level security (RLS) testing.
 
 ## Business Objectives
 
@@ -37,11 +37,11 @@ The project also demonstrates the integration of database-driven reporting with 
 
 **MySQL Database → Power BI (Power Query, Data Model and DAX) → Power BI Service**
 
-MySQL serves as the primary data source for the final Power BI implementation. Data is stored in relational tables and connected to Power BI for transformation, modeling, analysis and reporting.
+MySQL serves as the primary data source for the final Power BI implementation. The database contains the relational tables used for reporting and analysis. Power BI connects to MySQL for data transformation, modeling, DAX calculations and dashboard development.
 
 The project includes SQL scripts for database inspection, table validation, row counts, date-range checks and sample record verification.
 
-The original CSV datasets are retained in the `data/` folder as supporting source files for database setup and reproducibility. They are not presented as the primary data source for the final Power BI report.
+The original CSV files are retained in the `data/` folder and can be used to populate the MySQL tables when reproducing the project setup.
 
 ## Key Features
 
@@ -75,7 +75,7 @@ A scheduled refresh test completed successfully on 18 October 2026. The project 
 - [`README.md`](README.md) — project overview, architecture and navigation
 - [`PROJECT_LOG.md`](PROJECT_LOG.md) — technical history, implementation decisions, troubleshooting and validation
 - [`INTERVIEW_QA.md`](INTERVIEW_QA.md) — project-based interview questions and answers
-- [`data/`](data/) — nine CSV source datasets retained for database setup and reproducibility
+- [`data/`](data/) — nine CSV source datasets used to populate the MySQL tables and reproduce the project setup
 - [`sql/`](sql/) — MySQL setup, import examples and validation queries
   - [`marketing_funnel_mysql_setup_import_validation.sql`](sql/marketing_funnel_mysql_setup_import_validation.sql) — database setup instructions, CSV import examples, row-count checks and validation queries
 - [`powerbi/`](powerbi/) — Power BI report file
@@ -85,8 +85,8 @@ A scheduled refresh test completed successfully on 18 October 2026. The project 
 
 1. Start with this README to understand the business objectives, database architecture and reporting workflow.
 2. Review [PROJECT_LOG.md](PROJECT_LOG.md) for the development journey, technical decisions, troubleshooting and validation.
-3. Explore the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql) to review the database setup instructions and SQL validation queries.
-4. Browse the [supporting CSV datasets](data/) to understand the source tables used to populate the MySQL database.
+3. Explore the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql) to review database setup instructions and SQL validation queries.
+4. Browse the [CSV source datasets](data/) to understand the tables used to populate the MySQL database.
 5. Review the Power BI report in the [`powerbi/`](powerbi/) folder and explore the dashboard and deployment screenshots in [`screenshots/`](screenshots/).
 6. Use [INTERVIEW_QA.md](INTERVIEW_QA.md) to prepare for technical discussions about the project.
 
@@ -96,6 +96,6 @@ Opening the Power BI report locally may require Power BI Desktop, access to a co
 
 The SQL script documents database setup, CSV import examples and validation queries. Review the connection settings and local CSV file paths before running any import commands.
 
-The CSV files are retained to support database setup and reproducibility. Verify that all datasets are safe for public sharing before distributing them.
+The CSV datasets are included to support database setup and reproducibility. Verify that all datasets are safe for public sharing before distributing them.
 
 Database credentials, private connection details and confidential company or customer data must not be committed to the repository. Only publish data and files you have permission to share.

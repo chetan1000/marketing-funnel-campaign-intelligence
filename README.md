@@ -1,12 +1,14 @@
 # Marketing Funnel & Campaign Intelligence Dashboard
 
-An end-to-end Business Intelligence project built with **Power BI, MySQL, SQL, Power Query and DAX** to analyze marketing funnel performance, lead conversion, campaign effectiveness and revenue.
+An end-to-end Business Intelligence project built using **Power BI, MySQL, SQL, Power Query and DAX** to analyze marketing funnel performance, lead conversion, campaign effectiveness and revenue.
 
 ## Project Overview
 
-This project began with CSV-based data preparation and Power BI dashboard development. It was subsequently extended to use a MySQL database and published to Power BI Service.
+This project demonstrates an end-to-end Business Intelligence workflow centered on **MySQL database integration with Power BI**.
 
-The project demonstrates an end-to-end BI workflow covering data preparation, relational data modeling, analytical calculations, interactive reporting, service deployment and validation.
+The final portfolio implementation uses a MySQL relational database as the primary data source for Power BI. The project covers database connectivity, SQL-based data validation, data transformation, relational data modeling, DAX measures, interactive dashboards and deployment to Power BI Service.
+
+The project also demonstrates the integration of database-driven reporting with scheduled refresh, gateway configuration and row-level security (RLS) testing.
 
 ## Business Objectives
 
@@ -15,67 +17,85 @@ The project demonstrates an end-to-end BI workflow covering data preparation, re
 - Monitor revenue, advertising spend and return on ad spend (ROAS).
 - Identify differences in performance across marketing channels.
 - Build interactive reports using Power BI and DAX.
-- Integrate Power BI with MySQL.
+- Integrate Power BI with a MySQL relational database.
+- Validate source data using SQL queries.
 - Configure scheduled refresh and implement row-level security (RLS).
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Power BI Desktop | Data modeling, DAX measures and dashboard development |
-| Power Query | Data cleaning, transformation and preparation |
-| MySQL | Relational data storage |
-| SQL | Data querying and validation |
+| MySQL | Primary relational database and data source for the final Power BI implementation |
+| SQL | Database inspection, data validation, row counts, date checks and sample record verification |
+| Power BI Desktop | Data modeling, DAX measures and interactive dashboard development |
+| Power Query | Data transformation, cleaning and preparation |
 | DAX | Business metrics and analytical calculations |
-| Power BI Service | Report publishing, gateway configuration and scheduled refresh |
+| Power BI Service | Report publishing, gateway configuration, scheduled refresh and RLS testing |
+| GitHub | Version control, project documentation and portfolio presentation |
 
-## Data Pipeline
+## Data Architecture
 
-**CSV source files → MySQL database → Power BI data model → Interactive dashboard → Power BI Service**
+**MySQL Database → Power BI (Power Query, Data Model and DAX) → Power BI Service**
 
-The original CSV workflow is retained as part of the development history, while the MySQL-connected implementation is the main portfolio version.
+MySQL serves as the primary data source for the final Power BI implementation. Data is stored in relational tables and connected to Power BI for transformation, modeling, analysis and reporting.
+
+The project includes SQL scripts for database inspection, table validation, row counts, date-range checks and sample record verification.
+
+The original CSV datasets are retained in the `data/` folder as supporting source files for database setup and reproducibility. They are not presented as the primary data source for the final Power BI report.
 
 ## Key Features
 
+- MySQL database integration with Power BI
+- Relational data modeling and table relationships
+- SQL-based data validation and quality checks
 - Marketing funnel and conversion analysis
 - Campaign and channel performance reporting
 - Revenue, advertising spend and ROAS metrics
-- Interactive filters and drill-down analysis
-- MySQL database integration
+- DAX measures and interactive report filters
+- Power BI Service deployment
 - Gateway configuration and scheduled refresh
 - Row-level security testing in Power BI Desktop and Service
 
 ## Deployment and Validation
 
-The MySQL-connected report was published to Power BI Service. Gateway connectivity and scheduled refresh were configured, and a scheduled refresh test completed successfully on 18 October 2026.
+The MySQL-connected Power BI report was published to Power BI Service.
 
-RLS was tested in Power BI Desktop and Service. The project documentation records the tested access scenarios and implementation details.
+The deployment workflow includes:
+
+- MySQL data source connectivity
+- Gateway configuration
+- Scheduled refresh configuration
+- Refresh history verification
+- Row-level security testing in Power BI Desktop and Service
+
+A scheduled refresh test completed successfully on 18 October 2026. The project documentation records the validation scenarios and implementation details.
 
 ## Repository Structure
 
-- [`README.md`](README.md) — project overview and instructions
+- [`README.md`](README.md) — project overview, architecture and navigation
 - [`PROJECT_LOG.md`](PROJECT_LOG.md) — technical history, implementation decisions, troubleshooting and validation
 - [`INTERVIEW_QA.md`](INTERVIEW_QA.md) — project-based interview questions and answers
-- [`data/`](data/) — nine CSV datasets used for MySQL integration and Power BI analysis
-- [`sql/`](sql/) — SQL scripts and validation queries
-  - [`marketing_funnel_mysql_setup_import_validation.sql`](sql/marketing_funnel_mysql_setup_import_validation.sql) — MySQL setup, CSV import examples, row-count checks and validation queries
+- [`data/`](data/) — nine CSV source datasets retained for database setup and reproducibility
+- [`sql/`](sql/) — MySQL setup, import examples and validation queries
+  - [`marketing_funnel_mysql_setup_import_validation.sql`](sql/marketing_funnel_mysql_setup_import_validation.sql) — database setup instructions, CSV import examples, row-count checks and validation queries
 - [`powerbi/`](powerbi/) — Power BI report file
-- [`screenshots/`](screenshots/) — dashboard, data model and Power BI Service screenshots
+- [`screenshots/`](screenshots/) — dashboard pages, data model and Power BI Service screenshots
 
 ## How to Explore the Project
 
-1. Start with this README to understand the business objectives and architecture.
+1. Start with this README to understand the business objectives, database architecture and reporting workflow.
 2. Review [PROJECT_LOG.md](PROJECT_LOG.md) for the development journey, technical decisions, troubleshooting and validation.
-3. Explore the [project CSV datasets](data/) and the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql).
-4. Review the Power BI report in the [`powerbi/`](powerbi/) folder and explore the dashboard and deployment screenshots in [`screenshots/`](screenshots/).
-5. Use [INTERVIEW_QA.md](INTERVIEW_QA.md) to prepare for technical discussions about the project.
+3. Explore the [MySQL setup and validation SQL script](sql/marketing_funnel_mysql_setup_import_validation.sql) to review the database setup instructions and SQL validation queries.
+4. Browse the [supporting CSV datasets](data/) to understand the source tables used to populate the MySQL database.
+5. Review the Power BI report in the [`powerbi/`](powerbi/) folder and explore the dashboard and deployment screenshots in [`screenshots/`](screenshots/).
+6. Use [INTERVIEW_QA.md](INTERVIEW_QA.md) to prepare for technical discussions about the project.
 
 ## Requirements and Notes
 
-Opening the Power BI report locally may require Power BI Desktop and a compatible MySQL connection. Power BI Service refresh also depends on the configured data source and gateway.
+Opening the Power BI report locally may require Power BI Desktop, access to a compatible MySQL database and appropriate connection settings. Power BI Service refresh depends on the configured data source, gateway and credentials.
 
-The SQL script includes setup instructions, import examples and validation queries. Review the connection settings and local CSV file paths before running any import commands.
+The SQL script documents database setup, CSV import examples and validation queries. Review the connection settings and local CSV file paths before running any import commands.
 
-The CSV datasets are included to support exploration of the project. Verify that all data is safe for public sharing before publishing or distributing it.
+The CSV files are retained to support database setup and reproducibility. Verify that all datasets are safe for public sharing before distributing them.
 
-Database credentials, private connection details and confidential data must not be committed to the repository. Only publish data and files you have permission to share.
+Database credentials, private connection details and confidential company or customer data must not be committed to the repository. Only publish data and files you have permission to share.
